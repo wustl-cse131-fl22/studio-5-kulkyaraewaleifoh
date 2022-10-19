@@ -23,8 +23,8 @@ public class DistanceBetweenTest {
 		assertEquals(0.0, // The value we expect to get (to pass the test)
 				Methods.distanceBetween(1.0, 0.0, 1.0, 0.0), // The thing to test
 				1e-5); // This uses double, which are imprecise, so
-						// the delta is used to decide how close is "close enough".
-						// In this case + or - 0.00001 is being used
+		// the delta is used to decide how close is "close enough".
+		// In this case + or - 0.00001 is being used
 	}
 
 	/**
@@ -61,7 +61,14 @@ public class DistanceBetweenTest {
 	public void testPointsD() {
 		// TODO: FIXME!  This test has an error
 		// Test that the distance between (0,0) and (30,40) is 50.0 (order of parameters matters!)
-		assertEquals(50.0, Methods.distanceBetween(0.0, 30.0, 0.0, 40.0), 1e-5);
+		assertEquals(50.0, Methods.distanceBetween(0.0, 0.0, 30.0, 40.0), 1e-5);
+
 	}
+	public void testPointsE() {
+		//Test that the distance between (8,9) and (5,5) is 5.0
+		assertEquals(5.0, Methods.distanceBetween(8.0, 9.0, 5.0, 5.0), 1e-5);
+
+	}
+
 
 }
